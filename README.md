@@ -1,5 +1,12 @@
-ILB-focused feature-base development workflow for a git-tfs bridge
-==================================================================
+ILB-focused feature-based development workflow for a git-tfs bridge
+===================================================================
+
+Scripts and aliases set up to enable the use of a feature-based development
+workflow leveraging git's easy branch/merge functionality whilst working within
+the pre-existing project's TFS environment.
+
+There's nothing revolutionary here; it's just wrapping up git functionality and
+hoping to make things easier for people unfamiliar with git.
 
 Initialise your PowerShell Env
 ------------------------------
