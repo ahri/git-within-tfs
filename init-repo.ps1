@@ -8,6 +8,7 @@ Invoke-NativeCommand git checkout -f master # ~ 239s
 Invoke-GitTfsPull
 
 ### first time we create the TFS-Stripped branch
+Invoke-GitBranchStripped # ~ 1s
 Invoke-GitCheckoutStripped # ~ 1s
 Invoke-Git ls-files *.sln *.csproj *.vdproj *scc | & $path\tfs-strip.ps1 # ~48s
 Invoke-GitCommitStripped # ~3s
