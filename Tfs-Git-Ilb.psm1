@@ -33,6 +33,10 @@ Function Invoke-GitTfsPull {
     Invoke-Git tfs pull
 }
 
+Function Invoke-GitBranchStripped {
+    Invoke-Git branch $stripped_branch
+}
+
 Function Invoke-GitCheckoutStripped {
     Invoke-Git checkout $stripped_branch
 }
@@ -68,6 +72,7 @@ Export-ModuleMember -Function Invoke-NativeCommand,
                               Invoke-Git,
                               Exit-IfGitNotClean,
                               Invoke-GitTfsPull,
+                              Invoke-GitBranchStripped,
                               Invoke-GitCheckoutStripped,
                               Invoke-GitCommitStripped,
                               Invoke-GitRebaseStripped,
