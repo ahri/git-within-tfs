@@ -15,15 +15,15 @@ Foreach ($file in $input) {
     If ($file.name -Like "*.sln") {
         $p = 1
         (Get-Content $file.fullname) | Foreach-Object {
-            If ($file -Match "GlobalSection\(TeamFoundationVersionControl\)") {
+            If ($_ -Match "GlobalSection\(TeamFoundationVersionControl\)") {
                 $p = 0
             }
 
             If ($p -Eq 1) {
-                Write-Output $file
+                Write-Output $_
             }
 
-            If (($p -eq 0) -And ($file -Match "EndGlobalSection")) {
+            If (($p -eq 0) -And ($_ -Match "EndGlobalSection")) {
                 $p = 1
             }
         } | Set-Content $file.fullname
@@ -31,10 +31,10 @@ Foreach ($file in $input) {
 
     If ($file.name -Like "*.vdproj") {
         (Get-Content $file.fullname) | Foreach-Object {
-            If ($file -Match "Scc") {
-                $file = $file -Replace '"8:[^"]+"', '"8:"'
+            If ($_ -Match "Scc") {
+                $_ = $_ -Replace '"8:[^"]+"', '"8:"'
             }
-            Write-Output $file
+            Write-Output $_
         } | Set-Content $file.fullname
     }
 }
