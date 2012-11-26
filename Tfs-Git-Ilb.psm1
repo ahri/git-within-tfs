@@ -64,4 +64,13 @@ Function Get-GitBranch {
     Return (Invoke-Git symbolic-ref HEAD) -replace "^.*/", ""
 }
 
-Export-ModuleMember -Function Invoke-NativeCommand, Invoke-Git, Exit-IfGitNotClean, Invoke-GitTfsPull, Invoke-GitCheckoutStripped, Invoke-GitCommitStripped, Invoke-GitRebaseStripped, Invoke-GitCheckoutOffBranch, Invoke-GitFeatureCheckin, Get-GitBranch
+Export-ModuleMember -Function Invoke-NativeCommand,
+                              Invoke-Git,
+                              Exit-IfGitNotClean,
+                              Invoke-GitTfsPull,
+                              Invoke-GitCheckoutStripped,
+                              Invoke-GitCommitStripped,
+                              Invoke-GitRebaseStripped,
+                              Invoke-GitCheckoutOffBranch,
+                              Invoke-GitFeatureCheckin,
+                              Get-GitBranch
