@@ -1,16 +1,16 @@
-ILB-focused feature-based development workflow for a git-tfs bridge
+Feature-based development workflow for a git-tfs bridge
 ===================================================================
 
 Scripts and aliases set up to enable the use of a feature-based development
 workflow leveraging git's easy branch/merge functionality whilst working within
-the pre-existing project's TFS environment.
+an pre-existing project's TFS environment.
 
 There's nothing revolutionary here; it's just wrapping up git functionality and
 hoping to make things easier for people unfamiliar with git.
 
 Initialise your PowerShell Env
 ------------------------------
-    > . path_to_tfs-git-ilb\commands.ps1
+    > . path_to_git-within-tfs\commands.ps1
     Setting aliases:
          branch-feature
          checkin-feature
@@ -20,8 +20,8 @@ Initialise your PowerShell Env
 
 Unroll the Initial Repo (currently need to get this off Adam)
 -----------------------
-    > cd ILB_Workdir
-    > path_to_tfs-git-ilb\init-repo.ps1
+    > cd Workdir
+    > path_to_git-within-tfs\init-repo.ps1
 
 Workflow Thereafter
 -------------------

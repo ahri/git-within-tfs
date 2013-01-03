@@ -7,7 +7,7 @@
 )
 
 $path = Split-Path ($MyInvocation.MyCommand.Definition) -Parent
-Import-Module $path\TFS-Git-Ilb
+Import-Module $path\Git-Within-Tfs
 
 Exit-IfGitNotClean
 Invoke-GitCheckoutOffBranch $to_branch $from_branch

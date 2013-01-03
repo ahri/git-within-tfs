@@ -1,5 +1,5 @@
 ﻿$path = Split-Path ($MyInvocation.MyCommand.Definition) -Parent
-Import-Module $path\TFS-Git-Ilb
+Import-Module $path\Git-Within-Tfs
 
 ### roll out master
 Invoke-NativeCommand git checkout -f master # ~ 239s
